@@ -1,0 +1,11 @@
+[package]
+name = "terminal_size"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+ncurses = "5.101.0"
+
+[[bin]]
+name = "terminal_size"
+path = "src/main.rs"

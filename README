@@ -1,0 +1,54 @@
+# Terminal Size Display
+
+This Rust project uses ncurses to display the current size of your terminal window.
+
+## Prerequisites
+
+Before you begin, ensure you have Rust and Cargo installed on your system. You can install them from [https://www.rust-lang.org/](https://www.rust-lang.org/).
+
+You'll also need the ncurses development libraries:
+
+- On Ubuntu or Debian:
+
+sudo apt-get install libncurses5-dev libncursesw5-dev
+
+- On macOS with Homebrew:
+
+brew install ncurses
+
+- On Windows, consider using Windows Subsystem for Linux (WSL) or Cygwin.
+
+## Getting Started
+
+1. Clone this repository or create a new Rust project:
+
+2. Building and Running
+To build and run the project, use the following commands:
+
+cargo build
+cargo run
+
+3. *OPTIONAL* Build your project in release mode and install binary:
+
+cargo build --release
+cargo install --path .
+
+Ensure ~/.cargo/bin is in your PATH.
+
+This process installs the binary to your user's Cargo bin directory. If you want to install it to a system-wide location like `/usr/local/bin`, you would need root permissions and would manually copy the binary after building:
+
+sudo cp target/release/terminal_size /usr/local/bin/
+
+Remember to adjust permissions if necessary:
+sudo chmod +x /usr/local/bin/terminal_size
+
+
+## How It Works
+The program will display the current size of your terminal window. Press any key to exit.
+
+This program uses the ncurses library to:
+
+Initialize the screen
+Get the maximum Y and X coordinates (height and width)
+Display the size in the center of the screen
+Wait for user input before closing
