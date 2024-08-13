@@ -15,9 +15,16 @@ fn main() {
     // Clear the screen
     clear();
 
+    // Create a border around the main window
+    box_(stdscr(), 0, 0);
+
     // Display the window size
     mvprintw(max_y / 2 - 1, (max_x - 20) / 2, "Terminal Window Size");
-    mvprintw(max_y / 2 + 1, (max_x - 20) / 2, &format!("{}x{}", max_x, max_y));
+    mvprintw(
+        max_y / 2 + 1,
+        (max_x - 20) / 2,
+        &format!("{}x{}", max_x, max_y),
+    );
 
     // Refresh the screen
     refresh();
