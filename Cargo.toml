@@ -2,6 +2,7 @@
 name = "terminal_size"
 version = "0.1.0"
 edition = "2021"
+authors = ["Devin Egan <github@devinegan.com>"]
 
 [dependencies]
 ncurses = "5.101.0"
